@@ -26,7 +26,6 @@ img {
 
 input {
     height: 25px;
-    color: #4c3513;
     background-color: #FFFDF8;
     border: 5px solid #4c3513;
     padding: 15px;
@@ -38,7 +37,7 @@ input {
 }
 
 input, select, textarea{
-    color: #ff0000;
+    color: #4c3513;
 }
 
 button {
