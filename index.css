@@ -66,6 +66,10 @@ ul {
     gap: 10px;
 }
 
+#shopping-list {
+    text-align: center;
+}
+
 ul li {
     font-size: 20px;
     background-color: #FFFDF8;
