@@ -5,6 +5,8 @@ const appSettings = {
     databaseURL: "https://realtime-database-2a841-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
+
+
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
@@ -21,6 +23,8 @@ addButtonEl.addEventListener("click", function() {
     clearInputFieldEl()
 })
 
+
+
 onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
@@ -35,9 +39,11 @@ onValue(shoppingListInDB, function(snapshot) {
             appendItemToShoppingListEl(currentItem)
         }    
     } else {
-        shoppingListEl.innerHTML = "No items here... yet"
+        shoppingListEl.innerHTML = "No items here..."
     }
 })
+
+
 
 function clearShoppingListEl() {
     shoppingListEl.innerHTML = ""
@@ -55,7 +61,7 @@ function appendItemToShoppingListEl(item) {
     
     newEl.textContent = itemValue
     
-    newEl.addEventListener("click", function() {
+    newEl.addEventListener("dblclick", function() {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
