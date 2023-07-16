@@ -37,6 +37,10 @@ input {
     margin: 10px 0;
 }
 
+input, select, textarea{
+    color: #ff0000;
+}
+
 button {
     height: 65px;
     color: #4c3513;
