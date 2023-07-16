@@ -25,7 +25,8 @@ img {
 }
 
 input {
-    min-height: 25px;
+    
+    height: 30px;
     background-color: #FFFDF8;
     border: 5px solid #4c3513;
     padding: 15px;
